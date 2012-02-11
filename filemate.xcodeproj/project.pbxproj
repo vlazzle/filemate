@@ -14,19 +14,21 @@
 		F56623E814E4AB5E00DEDB09 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56623E614E4AB5E00DEDB09 /* MainMenu.xib */; };
 		F56623EB14E4AB5E00DEDB09 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = F56623EA14E4AB5E00DEDB09 /* rb_main.rb */; };
 		F56623ED14E4AB5E00DEDB09 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = F56623EC14E4AB5E00DEDB09 /* AppDelegate.rb */; };
+		F56623F714E4B33100DEDB09 /* Controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = F56623F614E4B33100DEDB09 /* Controller.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F56623D314E4AB5E00DEDB09 /* filemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = filemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56623D714E4AB5E00DEDB09 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F56623D914E4AB5E00DEDB09 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		F56623DE14E4AB5E00DEDB09 /* filemate-Info.plist */ = {isa = PBXFileReference; path = "filemate-Info.plist"; sourceTree = "<group>"; };
+		F56623DE14E4AB5E00DEDB09 /* filemate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "filemate-Info.plist"; sourceTree = "<group>"; };
 		F56623E014E4AB5E00DEDB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F56623E214E4AB5E00DEDB09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F56623E414E4AB5E00DEDB09 /* filemate-Prefix.pch */ = {isa = PBXFileReference; path = "filemate-Prefix.pch"; sourceTree = "<group>"; };
+		F56623E414E4AB5E00DEDB09 /* filemate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "filemate-Prefix.pch"; sourceTree = "<group>"; };
 		F56623E714E4AB5E00DEDB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F56623EA14E4AB5E00DEDB09 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		F56623EC14E4AB5E00DEDB09 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
+		F56623F614E4B33100DEDB09 /* Controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Controller.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		F56623DC14E4AB5E00DEDB09 /* filemate */ = {
 			isa = PBXGroup;
 			children = (
+				F56623F614E4B33100DEDB09 /* Controller.rb */,
 				F56623EC14E4AB5E00DEDB09 /* AppDelegate.rb */,
 				F56623E514E4AB5E00DEDB09 /* Resources */,
 				F56623E914E4AB5E00DEDB09 /* Other Sources */,
@@ -177,6 +180,7 @@
 				F56623E814E4AB5E00DEDB09 /* MainMenu.xib in Resources */,
 				F56623EB14E4AB5E00DEDB09 /* rb_main.rb in Resources */,
 				F56623ED14E4AB5E00DEDB09 /* AppDelegate.rb in Resources */,
+				F56623F714E4B33100DEDB09 /* Controller.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
