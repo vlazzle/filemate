@@ -46,9 +46,10 @@ class Controller
     
     # - (BOOL)tableView:(NSTableView *)aTableView shouldEditTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
     def tableView(aTableView, shouldEditTableColumn:aTableColumn, row:rowIndex)
-        open_path = "#{@base_path + @files[rowIndex]}"
+        open_path = (@base_path + @files[rowIndex]).to_s
         puts "open_path: #{open_path}"
         NSWorkspace.sharedWorkspace.openFile open_path
+        
         false
     end
 
