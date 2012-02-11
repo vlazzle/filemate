@@ -12,7 +12,7 @@
 # - NSTableViewDataDelegate
 # - NSControlDelegate
 
-class Controller
+class FIMAController
     
     MAX_NUM_FILES = 100
     

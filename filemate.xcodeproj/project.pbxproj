@@ -15,7 +15,7 @@
 		F56623E814E4AB5E00DEDB09 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F56623E614E4AB5E00DEDB09 /* MainMenu.xib */; };
 		F56623EB14E4AB5E00DEDB09 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = F56623EA14E4AB5E00DEDB09 /* rb_main.rb */; };
 		F56623ED14E4AB5E00DEDB09 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = F56623EC14E4AB5E00DEDB09 /* AppDelegate.rb */; };
-		F56623F714E4B33100DEDB09 /* Controller.rb in Resources */ = {isa = PBXBuildFile; fileRef = F56623F614E4B33100DEDB09 /* Controller.rb */; };
+		F56623F714E4B33100DEDB09 /* FIMAController.rb in Resources */ = {isa = PBXBuildFile; fileRef = F56623F614E4B33100DEDB09 /* FIMAController.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		F56623E714E4AB5E00DEDB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		F56623EA14E4AB5E00DEDB09 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		F56623EC14E4AB5E00DEDB09 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
-		F56623F614E4B33100DEDB09 /* Controller.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Controller.rb; sourceTree = "<group>"; };
+		F56623F614E4B33100DEDB09 /* FIMAController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = FIMAController.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 		F56623DC14E4AB5E00DEDB09 /* filemate */ = {
 			isa = PBXGroup;
 			children = (
-				F56623F614E4B33100DEDB09 /* Controller.rb */,
+				F56623F614E4B33100DEDB09 /* FIMAController.rb */,
 				F50D463F14E64A6700642FCA /* FIMATableView.rb */,
 				F56623EC14E4AB5E00DEDB09 /* AppDelegate.rb */,
 				F56623E514E4AB5E00DEDB09 /* Resources */,
@@ -183,7 +183,7 @@
 				F56623E814E4AB5E00DEDB09 /* MainMenu.xib in Resources */,
 				F56623EB14E4AB5E00DEDB09 /* rb_main.rb in Resources */,
 				F56623ED14E4AB5E00DEDB09 /* AppDelegate.rb in Resources */,
-				F56623F714E4B33100DEDB09 /* Controller.rb in Resources */,
+				F56623F714E4B33100DEDB09 /* FIMAController.rb in Resources */,
 				F50D464014E64A6700642FCA /* FIMATableView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

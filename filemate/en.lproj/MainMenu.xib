@@ -1548,7 +1548,7 @@
 				<string key="NSClassName">NSFontManager</string>
 			</object>
 			<object class="NSCustomObject" id="997340306">
-				<string key="NSClassName">Controller</string>
+				<string key="NSClassName">FIMAController</string>
 			</object>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -3769,7 +3769,7 @@
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
-					<string key="className">Controller</string>
+					<string key="className">FIMAController</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="outlets">
 						<bool key="EncodedWithXMLCoder">YES</bool>
@@ -3805,7 +3805,7 @@
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/Controller.h</string>
+						<string key="minorKey">./Classes/FIMAController.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">
