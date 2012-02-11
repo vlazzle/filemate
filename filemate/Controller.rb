@@ -30,6 +30,7 @@ class Controller
         reset_filelist
     end
     
+    # - (void)windowDidBecomeKey:(NSNotification *)notification
     def windowDidBecomeKey(notification)
         @window.makeFirstResponder @filename_textfield
     end
@@ -61,7 +62,6 @@ class Controller
     end
     
     # - (BOOL)control:(NSControl *)control textView:(NSTextView *)fieldEditor doCommandBySelector:(SEL)commandSelector
-    
     def control(control, textView:fieldEditor, doCommandBySelector:commandSelector)
         puts "commandSelector: #{commandSelector}"
         selector_str = commandSelector.to_s
