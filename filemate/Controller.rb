@@ -17,7 +17,7 @@ class Controller
     MAX_NUM_FILES = 100
     
     attr_writer :filelist_tableview
-    attr_writer :filename_textfield
+    attr_accessor :filename_textfield
     
     def awakeFromNib
         @base_path = Pathname.new('/Users/vlad/code/filemate/test_dir')

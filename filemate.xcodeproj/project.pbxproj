@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50D464014E64A6700642FCA /* FIMATableView.rb in Resources */ = {isa = PBXBuildFile; fileRef = F50D463F14E64A6700642FCA /* FIMATableView.rb */; };
 		F56623D814E4AB5E00DEDB09 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56623D714E4AB5E00DEDB09 /* Cocoa.framework */; };
 		F56623DA14E4AB5E00DEDB09 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56623D914E4AB5E00DEDB09 /* MacRuby.framework */; };
 		F56623E114E4AB5E00DEDB09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F56623DF14E4AB5E00DEDB09 /* InfoPlist.strings */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F50D463F14E64A6700642FCA /* FIMATableView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = FIMATableView.rb; sourceTree = "<group>"; };
 		F56623D314E4AB5E00DEDB09 /* filemate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = filemate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F56623D714E4AB5E00DEDB09 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F56623D914E4AB5E00DEDB09 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F56623F614E4B33100DEDB09 /* Controller.rb */,
+				F50D463F14E64A6700642FCA /* FIMATableView.rb */,
 				F56623EC14E4AB5E00DEDB09 /* AppDelegate.rb */,
 				F56623E514E4AB5E00DEDB09 /* Resources */,
 				F56623E914E4AB5E00DEDB09 /* Other Sources */,
@@ -181,6 +184,7 @@
 				F56623EB14E4AB5E00DEDB09 /* rb_main.rb in Resources */,
 				F56623ED14E4AB5E00DEDB09 /* AppDelegate.rb in Resources */,
 				F56623F714E4B33100DEDB09 /* Controller.rb in Resources */,
+				F50D464014E64A6700642FCA /* FIMATableView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +329,7 @@
 				F56623F214E4AB5E00DEDB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F56623F314E4AB5E00DEDB09 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -333,6 +338,7 @@
 				F56623F514E4AB5E00DEDB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
