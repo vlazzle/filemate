@@ -16,7 +16,6 @@ class Controller
     
     MAX_NUM_FILES = 100
     
-    attr_writer :window
     attr_writer :filelist_tableview
     attr_writer :filename_textfield
     
@@ -24,9 +23,15 @@ class Controller
         @base_path = Pathname.new('/Users/vlad/code/filemate/test_dir')
         @files = []
         
-        @window.makeFirstResponder @filename_textfield
+        @window = NSApplication.sharedApplication.delegate.window
+        
+        NSNotificationCenter.defaultCenter.addObserver self, selector:'windowDidBecomeKey:', name:NSWindowDidBecomeKeyNotification, object:@window
         
         reset_filelist
+    end
+    
+    def windowDidBecomeKey(notification)
+        @window.makeFirstResponder @filename_textfield
     end
     
     # - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
