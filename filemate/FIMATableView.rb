@@ -10,12 +10,15 @@
 class FIMATableView < NSTableView
     DOWN_ARROW_KEY_CODE = 125
     UP_ARROW_KEY_CODE = 126
+    TAB_KEY_CODE = 48
     
     # - (void)keyUp:(NSEvent *)theEvent
     def keyDown(theEvent)
         going_up = UP_ARROW_KEY_CODE == theEvent.keyCode
         going_down = DOWN_ARROW_KEY_CODE == theEvent.keyCode
-        if !theEvent.isARepeat && ((self.first_row_selected? && going_up) || (self.last_row_selected? && going_down))
+        tabbing = TAB_KEY_CODE == theEvent.keyCode
+        
+        if tabbing || (self.first_row_selected? && going_up) || (self.last_row_selected? && going_down)
             window = NSApplication.sharedApplication.delegate.window
             window.makeFirstResponder self.delegate.filename_textfield
         else
