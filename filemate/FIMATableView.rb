@@ -15,7 +15,7 @@ class FIMATableView < NSTableView
     def keyDown(theEvent)
         going_up = UP_ARROW_KEY_CODE == theEvent.keyCode
         going_down = DOWN_ARROW_KEY_CODE == theEvent.keyCode
-        if (self.first_row_selected? && going_up) || (self.last_row_selected? && going_down)
+        if !theEvent.isARepeat && ((self.first_row_selected? && going_up) || (self.last_row_selected? && going_down))
             window = NSApplication.sharedApplication.delegate.window
             window.makeFirstResponder self.delegate.filename_textfield
         else
