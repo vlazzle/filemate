@@ -57,8 +57,8 @@ class FIMAController
     # - (void)controlTextDidChange:(NSNotification *)aNotification
     def controlTextDidChange(aNotification)
         sender = aNotification.object
-        path_exression = sender.stringValue.dup
-        update_filelist(path_exression)
+        path_exp = sender.stringValue.dup
+        update_filelist(path_exp)
     end
     
     # - (BOOL)control:(NSControl *)control textView:(NSTextView *)fieldEditor doCommandBySelector:(SEL)commandSelector
@@ -86,11 +86,11 @@ class FIMAController
         update_filelist ''
     end
     
-    def update_filelist(path_exression)        
-        path_exression << '*' unless path_exression.include? '*'
-        path_exression = "**/#{path_exression}"
+    def update_filelist(path_exp)
+        path_exp << '*' unless path_exp.include? '*'
+        path_exp = "**/#{path_exp}"
         
-        glob = (@base_path + path_exression).to_s
+        glob = (@base_path + path_exp).to_s
         puts "glob: #{glob}"
         files = Pathname.glob(glob).slice(0, MAX_NUM_FILES)
         files.select! &:file?
