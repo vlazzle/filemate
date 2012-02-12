@@ -6,12 +6,6 @@
 #  Copyright 2012 __MyCompanyName__. All rights reserved.
 #
 
-
-# protocols:
-# - NSTableViewDataSource
-# - NSTableViewDataDelegate
-# - NSControlDelegate
-
 class FIMAController
     
     MAX_NUM_FILES = 100
@@ -19,6 +13,8 @@ class FIMAController
     attr_writer :filelist_tableview
     attr_accessor :filename_textfield
     
+    # NSNibAwaking
+    # - (void)awakeFromNib
     def awakeFromNib
         @base_path = Pathname.new('/Users/vlad/code/filemate/test_dir')
         @files = []
@@ -30,21 +26,25 @@ class FIMAController
         reset_filelist
     end
     
+    # NSWindowDelegate
     # - (void)windowDidBecomeKey:(NSNotification *)notification
     def windowDidBecomeKey(notification)
         @window.makeFirstResponder @filename_textfield
     end
     
+    # NSTableViewDataSource
     # - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
     def numberOfRowsInTableView(tableView)
         @files.length
     end
     
+    # NSTableViewDataSource
     # - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
     def tableView(aTableView, objectValueForTableColumn:aTableColumn, row:rowIndex)
         @files[rowIndex]
     end
     
+    # NSTableViewDelegate
     # - (BOOL)tableView:(NSTableView *)aTableView shouldEditTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
     def tableView(aTableView, shouldEditTableColumn:aTableColumn, row:rowIndex)
         open_path = (@base_path + @files[rowIndex]).to_s
@@ -53,7 +53,8 @@ class FIMAController
         
         false
     end
-
+    
+    # NSControl delegate method
     # - (void)controlTextDidChange:(NSNotification *)aNotification
     def controlTextDidChange(aNotification)
         sender = aNotification.object
@@ -61,6 +62,7 @@ class FIMAController
         update_filelist(path_exp)
     end
     
+    # NSControlTextEditingDelegate
     # - (BOOL)control:(NSControl *)control textView:(NSTextView *)fieldEditor doCommandBySelector:(SEL)commandSelector
     def control(control, textView:fieldEditor, doCommandBySelector:commandSelector)
         puts "commandSelector: #{commandSelector}"

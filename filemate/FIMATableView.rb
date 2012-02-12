@@ -12,6 +12,7 @@ class FIMATableView < NSTableView
     UP_ARROW_KEY_CODE = 126
     TAB_KEY_CODE = 48
     
+    # NSResponder
     # - (void)keyUp:(NSEvent *)theEvent
     def keyDown(theEvent)
         going_up = UP_ARROW_KEY_CODE == theEvent.keyCode
