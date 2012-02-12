@@ -12,6 +12,7 @@ class FIMAController
     
     attr_writer :filelist_tableview
     attr_accessor :filename_textfield
+    attr_writer :path_control
     
     # NSNibAwaking
     # - (void)awakeFromNib
@@ -24,6 +25,8 @@ class FIMAController
         NSNotificationCenter.defaultCenter.addObserver self, selector:'windowDidBecomeKey:', name:NSWindowDidBecomeKeyNotification, object:@window
         
         reset_filelist
+        
+        @path_control.setURL(NSURL.URLWithString(@base_path.to_s))
     end
     
     # NSWindowDelegate
@@ -47,11 +50,16 @@ class FIMAController
     # NSTableViewDelegate
     # - (BOOL)tableView:(NSTableView *)aTableView shouldEditTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
     def tableView(aTableView, shouldEditTableColumn:aTableColumn, row:rowIndex)
-        open_path = (@base_path + @files[rowIndex]).to_s
-        puts "open_path: #{open_path}"
-        NSWorkspace.sharedWorkspace.openFile open_path
+        NSWorkspace.sharedWorkspace.openFile(self.file_path_for_row(rowIndex))
         
         false
+    end
+    
+    # NSTableViewDelegate
+    # - (void)tableViewSelectionDidChange:(NSNotification *)aNotification
+    def tableViewSelectionDidChange(aNotification)
+        selected_path = self.file_path_for_row(@filelist_tableview.selectedRow)
+        @path_control.setURL(NSURL.URLWithString(selected_path))
     end
     
     # NSControl delegate method
@@ -101,5 +109,9 @@ class FIMAController
         puts "matches: #{@files}"
         
         @filelist_tableview.reloadData
+    end
+    
+    def file_path_for_row(row_index)
+        (@base_path + @files[row_index]).to_s
     end
 end
