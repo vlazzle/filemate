@@ -1350,7 +1350,7 @@
 										<object class="NSTableView" id="574547363">
 											<reference key="NSNextResponder" ref="521686727"/>
 											<int key="NSvFlags">256</int>
-											<string key="NSFrameSize">{480, 268}</string>
+											<string key="NSFrameSize">{480, 247}</string>
 											<reference key="NSSuperview" ref="521686727"/>
 											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="193634793"/>
@@ -1373,7 +1373,7 @@
 														<int key="NSCellFlags">75628096</int>
 														<int key="NSCellFlags2">2048</int>
 														<string key="NSContents"/>
-														<object class="NSFont" key="NSSupport" id="26">
+														<object class="NSFont" key="NSSupport">
 															<string key="NSName">LucidaGrande</string>
 															<double key="NSSize">11</double>
 															<int key="NSfFlags">3100</int>
@@ -1396,7 +1396,7 @@
 														<int key="NSCellFlags">337772096</int>
 														<int key="NSCellFlags2">1536</int>
 														<string key="NSContents">Text Cell</string>
-														<object class="NSFont" key="NSSupport">
+														<object class="NSFont" key="NSSupport" id="525087291">
 															<string key="NSName">LucidaGrande</string>
 															<double key="NSSize">13</double>
 															<int key="NSfFlags">1044</int>
@@ -1451,7 +1451,7 @@
 											<int key="NSTableViewGroupRowStyle">1</int>
 										</object>
 									</object>
-									<string key="NSFrame">{{1, 1}, {480, 268}}</string>
+									<string key="NSFrame">{{1, 1}, {480, 247}}</string>
 									<reference key="NSSuperview" ref="265122736"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="574547363"/>
@@ -1486,7 +1486,7 @@
 									<double key="NSPercent">0.99792099792099798</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{0, 58}, {482, 270}}</string>
+							<string key="NSFrame">{{0, 58}, {482, 249}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="521686727"/>
@@ -1569,7 +1569,7 @@
 						<object class="NSSearchField" id="276824234">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{20, 335}, {440, 19}}</string>
+							<string key="NSFrame">{{20, 322}, {440, 22}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="265122736"/>
@@ -1577,9 +1577,9 @@
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSearchFieldCell" key="NSCell" id="485445453">
 								<int key="NSCellFlags">343014976</int>
-								<int key="NSCellFlags2">268567616</int>
+								<int key="NSCellFlags2">268436544</int>
 								<string key="NSContents"/>
-								<reference key="NSSupport" ref="26"/>
+								<reference key="NSSupport" ref="525087291"/>
 								<string key="NSCellIdentifier">_NS:918</string>
 								<reference key="NSControlView" ref="276824234"/>
 								<bool key="NSDrawsBackground">YES</bool>
