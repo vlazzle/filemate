@@ -97,6 +97,10 @@ class FIMAController
     end
     
     def update_filelist(path_exp)
+        # deselect any rows to prevent tableViewSelectionDidChange from firing
+        # when there are no matching files to select from
+        @filelist_tableview.deselectAll self
+        
         path_exp << '*' unless path_exp.include? '*'
         path_exp = "**/#{path_exp}"
         
@@ -112,6 +116,8 @@ class FIMAController
     end
     
     def file_path_for_row(row_index)
-        (@base_path + @files[row_index]).to_s
+        file = @files[row_index]
+        puts "file #{row_index} #=> #{file}"
+        (@base_path + file).to_s
     end
 end
