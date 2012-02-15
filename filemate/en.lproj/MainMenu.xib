@@ -1582,6 +1582,7 @@
 								<int key="NSCellFlags2">268436544</int>
 								<string key="NSContents"/>
 								<reference key="NSSupport" ref="525087291"/>
+								<string key="NSPlaceholderString">file search</string>
 								<string key="NSCellIdentifier">_NS:918</string>
 								<reference key="NSControlView" ref="276824234"/>
 								<bool key="NSDrawsBackground">YES</bool>
