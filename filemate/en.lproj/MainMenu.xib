@@ -1518,7 +1518,7 @@
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSPathCell" key="NSCell" id="922040654">
 								<int key="NSCellFlags">337772033</int>
-								<int key="NSCellFlags2">131072</int>
+								<int key="NSCellFlags2">33685504</int>
 								<object class="NSURL" key="NSContents">
 									<nil key="NS.base"/>
 									<string key="NS.relative">file://localhost/Applications/</string>
