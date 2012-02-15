@@ -18,6 +18,8 @@
 			<string>NSScrollView</string>
 			<string>NSTextFieldCell</string>
 			<string>NSPathCell</string>
+			<string>NSImageView</string>
+			<string>NSImageCell</string>
 			<string>NSTableView</string>
 			<string>NSSearchField</string>
 			<string>NSPathControl</string>
@@ -1569,10 +1571,10 @@
 						<object class="NSSearchField" id="276824234">
 							<reference key="NSNextResponder" ref="439893737"/>
 							<int key="NSvFlags">266</int>
-							<string key="NSFrame">{{20, 322}, {440, 22}}</string>
+							<string key="NSFrame">{{20, 322}, {390, 22}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="265122736"/>
+							<reference key="NSNextKeyView" ref="1023244897"/>
 							<string key="NSReuseIdentifierKey">_NS:918</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSearchFieldCell" key="NSCell" id="485445453">
@@ -1630,6 +1632,38 @@
 								</object>
 								<int key="NSMaximumRecents">255</int>
 							</object>
+						</object>
+						<object class="NSImageView" id="1023244897">
+							<reference key="NSNextResponder" ref="439893737"/>
+							<int key="NSvFlags">265</int>
+							<object class="NSMutableSet" key="NSDragTypes">
+								<bool key="EncodedWithXMLCoder">YES</bool>
+								<object class="NSArray" key="set.sortedObjects">
+									<bool key="EncodedWithXMLCoder">YES</bool>
+									<string>Apple PDF pasteboard type</string>
+									<string>Apple PICT pasteboard type</string>
+									<string>Apple PNG pasteboard type</string>
+									<string>NSFilenamesPboardType</string>
+									<string>NeXT Encapsulated PostScript v1.2 pasteboard type</string>
+									<string>NeXT TIFF v4.0 pasteboard type</string>
+								</object>
+							</object>
+							<string key="NSFrame">{{415, 309}, {48, 48}}</string>
+							<reference key="NSSuperview" ref="439893737"/>
+							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView" ref="265122736"/>
+							<string key="NSReuseIdentifierKey">_NS:2141</string>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSImageCell" key="NSCell" id="771209781">
+								<int key="NSCellFlags">130560</int>
+								<int key="NSCellFlags2">33554432</int>
+								<string key="NSCellIdentifier">_NS:2141</string>
+								<int key="NSAlign">0</int>
+								<int key="NSScale">0</int>
+								<int key="NSStyle">2</int>
+								<bool key="NSAnimates">NO</bool>
+							</object>
+							<bool key="NSEditable">YES</bool>
 						</object>
 					</object>
 					<string key="NSFrameSize">{480, 360}</string>
@@ -2377,6 +2411,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
+						<string key="label">fileicon_imageview</string>
+						<reference key="source" ref="997340306"/>
+						<reference key="destination" ref="1023244897"/>
+					</object>
+					<int key="connectionID">578</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="371380764"/>
 						<reference key="destination" ref="997340306"/>
@@ -2951,6 +2993,7 @@
 							<reference ref="265122736"/>
 							<reference ref="371380764"/>
 							<reference ref="276824234"/>
+							<reference ref="1023244897"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -3517,6 +3560,20 @@
 						<reference key="object" ref="485445453"/>
 						<reference key="parent" ref="276824234"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">573</int>
+						<reference key="object" ref="1023244897"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="771209781"/>
+						</object>
+						<reference key="parent" ref="439893737"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">574</int>
+						<reference key="object" ref="771209781"/>
+						<reference key="parent" ref="1023244897"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -3676,6 +3733,8 @@
 					<string>569.IBPluginDependency</string>
 					<string>57.IBPluginDependency</string>
 					<string>570.IBPluginDependency</string>
+					<string>573.IBPluginDependency</string>
+					<string>574.IBPluginDependency</string>
 					<string>58.IBPluginDependency</string>
 					<string>72.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
@@ -3858,6 +3917,8 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="unlocalizedProperties">
@@ -3872,7 +3933,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">572</int>
+			<int key="maxID">578</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3903,12 +3964,14 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>fileicon_imageview</string>
 							<string>filelist_tableview</string>
 							<string>filename_textfield</string>
 							<string>path_control</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -3918,12 +3981,17 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>fileicon_imageview</string>
 							<string>filelist_tableview</string>
 							<string>filename_textfield</string>
 							<string>path_control</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">fileicon_imageview</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">filelist_tableview</string>
 								<string key="candidateClassName">id</string>

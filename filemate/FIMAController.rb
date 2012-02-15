@@ -13,6 +13,7 @@ class FIMAController
     attr_writer :filelist_tableview
     attr_accessor :filename_textfield
     attr_writer :path_control
+    attr_writer :fileicon_imageview
     
     # NSNibAwaking
     # - (void)awakeFromNib
@@ -60,6 +61,9 @@ class FIMAController
     def tableViewSelectionDidChange(aNotification)
         selected_path = self.file_path_for_row(@filelist_tableview.selectedRow)
         @path_control.setURL(NSURL.URLWithString(selected_path))
+        
+        img = NSWorkspace.sharedWorkspace.iconForFile selected_path
+        @fileicon_imageview.setImage img
     end
     
     # NSControl delegate method
@@ -97,9 +101,7 @@ class FIMAController
     end
     
     def update_filelist(path_exp)
-        # deselect any rows to prevent tableViewSelectionDidChange from firing
-        # when there are no matching files to select from
-        @filelist_tableview.deselectAll self
+        self.clear_file_selection
         
         path_exp << '*' unless path_exp.include? '*'
         path_exp = "**/#{path_exp}"
@@ -119,5 +121,13 @@ class FIMAController
         file = @files[row_index]
         puts "file #{row_index} #=> #{file}"
         (@base_path + file).to_s
+    end
+    
+    def clear_file_selection
+        # deselect any rows to prevent tableViewSelectionDidChange from firing
+        # when there are no matching files to select from
+        @filelist_tableview.deselectAll self
+        
+        @fileicon_imageview.setImage nil
     end
 end
